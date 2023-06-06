@@ -94,7 +94,7 @@ function OpenVehicleSpawnerMenu(station, partNum)
               ESX.ShowNotification(_U('service_max') .. inServiceCount .. '/' .. maxInService)
             end
 
-          end, 'themafia')
+          end, 'mafia')
 
         end
 
@@ -258,7 +258,7 @@ Citizen.CreateThread(function()
       AddTextComponentString(CurrentActionMsg)
       DisplayHelpTextFromStringLabel(0, 0, 1, -1)
 
-      if IsControlJustPressed(0, 38) and PlayerData.job ~= nil and PlayerData.job.name == 'themafia' and (GetGameTimer() - GUI.Time) > 150 then
+      if IsControlJustPressed(0, 38) and PlayerData.job ~= nil and PlayerData.job.name == 'mafia' and (GetGameTimer() - GUI.Time) > 150 then
 
         if CurrentAction == 'menu_armory' then
           OpenArmoryMenu(CurrentActionData.station)
@@ -273,7 +273,7 @@ Citizen.CreateThread(function()
           if Config.EnableSocietyOwnedVehicles then
 
             local vehicleProps = ESX.Game.GetVehicleProperties(CurrentActionData.vehicle)
-            TriggerServerEvent('esx_society:putVehicleInGarage', 'themafia', vehicleProps)
+            TriggerServerEvent('esx_society:putVehicleInGarage', 'mafia', vehicleProps)
 
           else
 
@@ -286,7 +286,7 @@ Citizen.CreateThread(function()
               GetEntityModel(vehicle) == GetHashKey('burrito3') or
               GetEntityModel(vehicle) == GetHashKey('mesa')
             then
-              TriggerServerEvent('esx_service:disableService', 'themafia')
+              TriggerServerEvent('esx_service:disableService', 'mafia')
             end
 
           end
@@ -296,7 +296,7 @@ Citizen.CreateThread(function()
 
         if CurrentAction == 'menu_boss_actions' then
           ESX.UI.Menu.CloseAll()
-		  TriggerEvent('esx_society:openBossMenu', 'themafia', function(data, menu)
+		  TriggerEvent('esx_society:openBossMenu', 'mafia', function(data, menu)
 			menu.close()
 
 			CurrentAction     = 'menu_boss_actions'
@@ -312,7 +312,7 @@ Citizen.CreateThread(function()
 
     end
 
-   if IsControlJustPressed(0, 167) and PlayerData.job ~= nil and PlayerData.job.name == 'themafia' and not ESX.UI.Menu.IsOpen('default', GetCurrentResourceName(), 'ballas_actions') and (GetGameTimer() - GUI.Time) > 150 then
+   if IsControlJustPressed(0, 167) and PlayerData.job ~= nil and PlayerData.job.name == 'mafia' and not ESX.UI.Menu.IsOpen('default', GetCurrentResourceName(), 'ballas_actions') and (GetGameTimer() - GUI.Time) > 150 then
      OpenBallasActionsMenu()
      GUI.Time = GetGameTimer()
     end
