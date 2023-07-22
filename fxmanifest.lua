@@ -3,7 +3,7 @@ fx_version 'adamant'
 game 'gta5'
 
 description 'ESX Cartel'
-version '1.0'
+version '1.1'
 lua54 'yes'
 author 'Bro0kS#1624'
 
