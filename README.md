@@ -1,3 +1,5 @@
+# <div align='center'><h3><a href='https://forum.cfx.re/t/free-advanced-cartel-job-v1-1-ox-lib-ox-target-ox-inventory/5146687'>View on FiveM forum</a></h3></div>
+
 # esx_AdvancedCartel
 A performant and flexible cartel job for ESX framework with Ox_Inventory and Ox_Target integrations
 
