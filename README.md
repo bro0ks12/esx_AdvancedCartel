@@ -3,6 +3,9 @@
 # esx_AdvancedCartel
 A performant and flexible cartel job for ESX framework with Ox_Inventory and Ox_Target integrations
 
+**Preview**
+https://youtu.be/LytJnP5LDKY
+
 **Instalation instructions**
 * add `ensure esx_AdvancedCartel` to your `server.cfg`
 
