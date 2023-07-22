@@ -1,5 +1,4 @@
 Locales['br'] = {
-  -- Vehicles
   ['vehicle_menu'] = 'Veículo',
   ['garage_storeditem'] = 'Abrir garagem',
   ['garage_storeitem'] = 'Guardar veículo na garagem',
@@ -17,5 +16,11 @@ Locales['br'] = {
   ['vehicle_blocked'] = 'Todos os sitios de spawn estão ocupados.',
   ['vehicleshop_bought'] = 'Compras-te um %s por $%s.',
   ['vehicleshop_money'] = 'Não tens dinheiro suficiente.',
-  ['vehicleshop_awaiting_model'] = 'O veículo está atualmente a fazer DOWNLOAD & LOADING por favor aguarde',
+  ['vehicleshop_awaiting_model'] = 'O veículo está atualmente a fazer DOWNLOAD & LOADING por favor aguarde', 
+  ['open_storage'] = 'Abrir armazém',
+  ['open_company'] = 'Abrir gestão de empresa',
+  ['open_garage'] = 'Abrir garagem',
+  ['view'] = 'Visualizar',
+  ['buy'] = 'Comprar',
+  ['stop_view'] = 'Sair',
 }

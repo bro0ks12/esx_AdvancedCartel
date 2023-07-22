@@ -17,7 +17,7 @@ Citizen.CreateThread(function()
               exports["esx_AdvancedCartel"]:OpenArmoryMenu()
             end,
             icon = 'fa-solid fa-magnifying-glass',
-            label = 'Abrir armazém',
+            label = TranslateCap("open_storage"),
         }
     }
   })
@@ -32,7 +32,7 @@ Citizen.CreateThread(function()
 				icon = 'fas fa-bars-progress',
 				groups = {['cartel'] = 3},
 				distance = 2,
-				label = 'Abrir Gestão de Empresa',
+				label = TranslateCap("open_company"),
 				menuOptions = {
 					society = "cartel",
 					close = function(data, menu)
@@ -73,7 +73,7 @@ Citizen.CreateThread(function()
 				name = 'box4',
 				icon = 'fas fa-bars-progress',
 				groups = 'cartel',
-				label = 'Abrir a Garagem',
+				label = TranslateCap("open_garage"),
 				distance = 1.5,
 				event = 'esx_AdvancedCartel:OpenVehicleSpawnerMenu',
 				menuOptions = {
