@@ -22,15 +22,28 @@ ESX.RegisterServerCallback('esx_AdvancedCartel:buyJobVehicle', function(source, 
 	if price == 0 then
 		cb(false)
 	else
-		if exports.pefcl:getDefaultAccountBalance(source).data >= price then
+		if Config.UsePefcl then
+			if exports.pefcl:getDefaultAccountBalance(source).data >= price then
 
-			MySQL.insert('INSERT INTO owned_vehicles (owner, vehicle, plate, type, job, `stored`, name) VALUES (?, ?, ?, ?, ?, ?, ?)', { xPlayer.identifier, json.encode(vehicleProps), vehicleProps.plate, type, xPlayer.job.name, true, vehicleName},
-			function (rowsChanged)
-				cb(true)
-			end)
-			exports.pefcl:removeBankBalance(source, { amount = price, message = "Compra de veículo" })
-		else
-			cb(false)
+				MySQL.insert('INSERT INTO owned_vehicles (owner, vehicle, plate, type, job, `stored`, name) VALUES (?, ?, ?, ?, ?, ?, ?)', { xPlayer.identifier, json.encode(vehicleProps), vehicleProps.plate, type, xPlayer.job.name, true, vehicleName},
+				function (rowsChanged)
+					cb(true)
+				end)
+				exports.pefcl:removeBankBalance(source, { amount = price, message = "Compra de veículo" })
+			else
+				cb(false)
+			end
+		else 
+			if xPlayer.getMoney() >= price then
+
+				MySQL.insert('INSERT INTO owned_vehicles (owner, vehicle, plate, type, job, `stored`, name) VALUES (?, ?, ?, ?, ?, ?, ?)', { xPlayer.identifier, json.encode(vehicleProps), vehicleProps.plate, type, xPlayer.job.name, true, vehicleName},
+				function (rowsChanged)
+					cb(true)
+				end)
+				xPlayer.removeMoney(price, "Compra de veículo")
+			else
+				cb(false)
+			end
 		end
 	end
 end)

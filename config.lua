@@ -5,6 +5,7 @@ Config.MarkerSize                 = { x = 1.5, y = 1.5, z = 1.0 }
 Config.MarkerColor                = { r = 50, g = 50, b = 204 }
 
 Config.Locale                     = 'br'
+Config.UsePefcl                   = true -- True uses Pefcl, false uses esx
 
 Config.JobId                      = "Cartel1" -- Name without spaces
 Config.JobName                    = "Cartel" -- Name of the job (can use spaces)
