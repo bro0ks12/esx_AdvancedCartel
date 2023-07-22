@@ -2,13 +2,16 @@ fx_version 'adamant'
 
 game 'gta5'
 
-description 'ESX Mafia'
-
+description 'ESX Cartel'
 version '1.0'
+lua54 'yes'
 author 'Bro0kS#1624'
 
-shared_script '@es_extended/imports.lua'
-
+shared_script {
+  '@es_extended/imports.lua',
+  '@ox_lib/init.lua',
+}
+  
 server_scripts {
   '@es_extended/locale.lua',
   '@mysql-async/lib/MySQL.lua',
@@ -29,5 +32,6 @@ client_scripts {
   'locales/fr.lua',
   'locales/es.lua',
   'config.lua',
-  'client/main.lua'
+  'client/main.lua',
+  'client/vehicle.lua'
 }

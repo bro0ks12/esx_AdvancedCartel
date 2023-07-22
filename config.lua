@@ -3,51 +3,46 @@ Config.DrawDistance               = 100.0
 Config.MarkerType                 = 22
 Config.MarkerSize                 = { x = 1.5, y = 1.5, z = 1.0 }
 Config.MarkerColor                = { r = 50, g = 50, b = 204 }
-Config.EnablePlayerManagement     = true
-Config.EnableESXIdentity          = true -- only turn this on if you are using esx_identity
-Config.EnableSocietyOwnedVehicles = false
-Config.MaxInService               = -1
+
 Config.Locale                     = 'br'
 
-Config.JobId                      = "MafiaCartel" -- Name without spaces
-Config.JobName                    = "Mafia Cartel" -- Name of the job (can use spaces)
-Config.StashWeight                = 200 -- Max weight that the stash can have
-Config.StashGroups                = "mafia" -- Can add multiples ({["police"] = 0, ["ambulance"] = 2})
+Config.JobId                      = "Cartel1" -- Name without spaces
+Config.JobName                    = "Cartel" -- Name of the job (can use spaces)
+Config.StashWeight                = 200000 -- Max weight that the stash can have
+Config.StashGroups                = "cartel" -- Can add multiples ({["police"] = 0, ["ambulance"] = 2})
 
-Config.MafiaStations = {
+Config.PedBlips = {
+	PedLocs = {
+		Pos = {
+			vector4(1403.103, 1123.331, 113.826, 189.921265),
+		}
+	}
+}
 
-  Mafia = {
+Config.CartelStations = {
+
+  Cartel = {
 
     AuthorizedVehicles = {
-      { name = 'hexer',          label = 'Hexer' },
-      { name = 'innovation',     label = 'Innovation' },
-      { name = 'daemon',         label = 'Daemon' },
-      { name = 'Zombieb',        label = 'Zombie Chopper' },
-      { name = 'slamvan',        label = 'Slamvan' },
-      { name = 'GBurrito',       label = 'Gang Burrito' },
-      { name = 'sovereign',      label = 'Sovereign' },
-      { name = 'benson',         label = 'Benson' },		  
+      { model = 'adder', name = 'Addder', price = 20000},
+      { model = 't20', name = 'FDD', price = 20000},	  
     },
 
-    Armories = {
-      vec3(986.77, -92.75, 74.85),
-    },
+    OpenGarage = vec3(1403.103, 1123.331, 114.826),
+
+    Armories = vec3(1406.695, 1137.753, 109.550),
 
     Vehicles = {
-      {
-        Spawner    = { x = 969.87, y = -113.54, z = 74.35 },
-        SpawnPoint = { x = 967.89, y = -127.17, z = 74.37 },
-        Heading    = 147.03,
-      }
-    },
+			{
+				InsideShop = vector3(1450.219, 1068.540, 115.582),
+				SpawnPoints = {
+					{coords = vector3(1413.718628, 1116.316528, 114.421997), heading = 87.874016, radius = 6.0},
+					{coords = vector3(1413.982422, 1120.931885, 114.421997), heading = 87.874016, radius = 6.0},
+				}
+			},
+		},
 
-    VehicleDeleters = {
-      { x = 965.03, y = -118.7, z = 74.35 },
-    },
-
-    BossActions = {
-      { x = 977.03, y = -103.92, z = 74.85 },
-    },
+    BossActions = vec3(1393.768, 1160.991, 114.103),
 	
   },
   
