@@ -3,10 +3,11 @@ local CurrentAction             = nil
 local CurrentActionMsg          = ''
 local CurrentActionData         = {}
 local ox_inventory              = exports.ox_inventory
+local ox_target                 = exports.ox_target
 local model = "g_m_m_casrn_01"
 
 Citizen.CreateThread(function()
-  ox_inventory:addSphereZone({
+  ox_target:addSphereZone({
     coords = Config.CartelStations.Cartel.Armories,
     radius = 0.3,
     distance = 1.5,
@@ -21,7 +22,7 @@ Citizen.CreateThread(function()
         }
     }
   })
-  ox_inventory:addSphereZone({
+  ox_target:addSphereZone({
     coords = Config.CartelStations.Cartel.BossActions,
     radius = 0.3,
     distance = 1.5,
@@ -65,7 +66,7 @@ Citizen.CreateThread(function()
 		end
 	end
 
-	ox_inventory:addSphereZone({
+	ox_target:addSphereZone({
 		coords = Config.CartelStations.Cartel.OpenGarage,
 		radius = 0.7,
 		options = {
