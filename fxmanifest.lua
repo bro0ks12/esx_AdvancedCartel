@@ -15,7 +15,7 @@ shared_script {
 server_scripts {
   '@es_extended/locale.lua',
   '@mysql-async/lib/MySQL.lua',
-  'locales/br.lua',,
+  'locales/br.lua',
   'locales/en.lua',
   'config.lua',
   'server/main.lua'
